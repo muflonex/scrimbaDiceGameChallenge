@@ -3,9 +3,9 @@
     const REPEAT_BUTTON = document.querySelector('#btnRepeat');
     const MESSAGE = document.querySelector(`#message`);
     const DICE = document.querySelectorAll(`[id*=Dice]`);
+
     const LOSING_THROW = 1;
     const WINNING_SCORE = 20;
-    
     let currentPlayer = 1;
     let playerScores = [0,0];
     
@@ -81,8 +81,10 @@
         toggleButton('btnRoll');
         toggleButton('btnRepeat'); 
         DICE.forEach((die,index) => {
+            die.classList.remove('active');
             renderPlayerCurrentScore(0, index+1);
             renderDie(0,index+1);
         });
+        document.querySelector('#player1Dice').classList.add('active');
     }
 })();

@@ -1,6 +1,13 @@
 @font-face {
     font-family: 'DiceFont';
-    src: url('./dPolyBlockDice.otf');
+    src: url('./fonts/dPolyBlockDice.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alpha Slab';
+    src: url('./fonts/AlfaSlabOne-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,34 +18,49 @@ html, body {
 }
 
 body {
-    padding-top: 100px;
+    height: 100vh;
+    overflow: hidden;
     background-image: linear-gradient(135deg, #F6B8B8 , #1A8FF5);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Alpha Slab';
+    letter-spacing: 2px;
 }
 
 .container {
+    background-image: url('./images/table-mesh.jpg');
+    border: 20px solid transparent;
+    border-image: url('./images/wood.jpg') 50 round;
     width: 600px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: #fff;
-    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+    box-shadow: 
+    -2px 6px 18px 3px rgba(0,0,0,.75), 
+    inset 5px 5px 20px rgba(0,0,0,.75),
+    inset -5px -5px 20px rgba(0,0,0,.75);
     padding: 50px;
 }
 
 #message {
     flex: 0 0 100%;
+    font-size: 1.5em;
     text-align: center;
 }
 
 #player1, #player2 {
     flex: 0 0 50%;
     text-align: center;
+}
+
+h1{
+    font-size: 2em;
+    color: #06430b;
+    -webkit-text-stroke: .1px white;
 }
 
 #player1Dice,
@@ -61,14 +83,41 @@ body {
 
 #btnRoll,
 #btnRepeat {
-    background-color: royalblue;
-    color: #fff;
+    box-sizing:border-box;
+    background-color: goldenrod;
+    border-top: 15px solid #ad8d5dbe;
+    border-left: 15px solid #866e49be;
+    border-right: 15px solid #44251abe;
+    border-bottom: 15px solid #573427be;
+    box-shadow: 1px 1px black, -1px -1px black;
+    color: #7e4e3dbe;
     padding: 20px 30px;
-    font-size: 24px;
-    margin-top: 20px;
+    font-family: 'Alpha Slab';
+    text-shadow: 2px 2px #f3e5e0be;
+    font-size: 2em;
+    margin-top: 3em;
+    transition: all .3s ease-in-out;
+    height: 120px;
+}
+#btnRoll:active,
+#btnRepeat:active {
+    border-top: 5px solid #ad8d5dbe;
+    border-left: 5px solid #866e49be;
+    border-right: 5px solid #44251abe;
+    border-bottom: 5px solid #573427be;
+}
+#btnRoll:active,
+#btnRepeat:active,
+#btnRoll:focus,
+#btnRepeat:focus {
+    outline: none;
 }
 
+#btnRoll:hover,
+#btnRepeat:hover {
+    background-color: #fcae39;
+}
 .active {
-    box-shadow: 7px 7px 10px 0px rgba(121, 85, 72, 0.6);
+    box-shadow: 7px 7px 10px 0px #06050599;
     transform: scale(1.1);
 }

@@ -1,3 +1,5 @@
+[Link](https://muflonex.github.io/scrimbaDiceGameChallenge/)
+
 **Challenge**:
 Create a Dice Game with JavaScript with the following rules:
 - Players roll the dice once during their turn
