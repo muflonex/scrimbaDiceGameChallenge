@@ -96,6 +96,7 @@ h1{
     margin-top: 3em;
     transition: all .3s ease-in-out;
     height: 120px;
+    width: 100%;
 }
 #btnRoll:active,
 #btnRepeat:active {
